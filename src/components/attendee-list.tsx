@@ -186,19 +186,25 @@ export function AttendeeList() {
                 Página {page} de {totalPages}
               </span>
               <div className="flex gap-1.5">
-                <IconButton onClick={goToFirstPage} disabled={page === 1}>
+                <IconButton
+                  onClick={goToFirstPage}
+                  disabled={page === 1 || totalPages === 0}
+                >
                   <ChevronsLeft className="size-4" />
                 </IconButton>
-                <IconButton onClick={goToPreviousPage} disabled={page === 1}>
+                <IconButton
+                  onClick={goToPreviousPage}
+                  disabled={page === 1 || totalPages === 0}
+                >
                   <ChevronLeft className="size-4" />
                 </IconButton>
                 <IconButton
                   onClick={goToNextPage}
-                  disabled={page === totalPages}
+                  disabled={page === totalPages || totalPages === 0}
                 >
                   <ChevronRight className="size-4" />
                 </IconButton>
-                <IconButton disabled={page === totalPages}>
+                <IconButton disabled={page === totalPages || totalPages === 0}>
                   <ChevronsRight onClick={goToLastPage} className="size-4" />
                 </IconButton>
               </div>
