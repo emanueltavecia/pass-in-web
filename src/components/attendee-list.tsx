@@ -68,6 +68,14 @@ export function AttendeeList() {
         setAttendees(data.attendees)
         setTotal(data.total)
       })
+      .catch(() => {
+        alert(
+          `Você está acessando o deploy apenas do front-end, portanto não há dados para serem exibidos.
+          Caso queira acessar a aplicação completa, faça o passo a passo da sessão Getting Started disponível no repositório do GitHub deste projeto.
+
+          https://github.com/emanueltavecia/pass-in-web#getting-started`
+        )
+      })
   }, [page, search])
 
   function setCurrentSearch(search: string) {
