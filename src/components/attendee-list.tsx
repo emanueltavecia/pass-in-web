@@ -71,9 +71,10 @@ export function AttendeeList() {
       .catch(() => {
         alert(
           `Você está acessando o deploy apenas do front-end, portanto não há dados para serem exibidos.
-          Caso queira acessar a aplicação completa, faça o passo a passo da sessão Getting Started disponível no repositório do GitHub deste projeto.
 
-          https://github.com/emanueltavecia/pass-in-web#getting-started`
+Caso queira acessar a aplicação completa, faça o passo a passo da sessão Getting Started disponível no repositório do GitHub deste projeto.
+
+https://github.com/emanueltavecia/pass-in-web#getting-started`
         )
       })
   }, [page, search])
